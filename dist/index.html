@@ -19,7 +19,7 @@
 
             <form action="#" class="search">
                 <input type="text" class="search__input" placeholder="Search hotels">
-                <button class="search__button">
+                <button class="search__button" name="search">
                     <svg class="search__icon">
                         <use xlink:href="img/sprite.svg#icon-magnifying-glass"></use>
                     </svg>
@@ -127,7 +127,7 @@
                         <svg class="overview__icon-location">
                             <use xlink:href="img/sprite.svg#icon-location-pin"></use>
                         </svg>
-                        <button class="btn-inline">Albufeira, Portugal</button>
+                        <button class="btn-inline" name="location">Albufeira, Portugal</button>
                     </div>
                     <div class="overview__rating">
                         <div class="overview__rating-average">8.6</div>
@@ -201,14 +201,14 @@
                                 <div class="review__rating">9.3</div>
                             </figcaption>
                         </figure>
-                        <button class="btn-inline">Show all <span>&rarr;</span></button>
+                        <button class="btn-inline" name="show-all">Show all <span>&rarr;</span></button>
                     </div>
                 </div>
                 <div class="cta">
                     <h2 class="cta__book-now">
                         Good news! We have 4 free rooms for your selected dates!
                     </h2>
-                    <button class="btn">
+                    <button class="btn" name="book-now">
                         <span class="btn__visible">Book now</span>
                         <span class="btn__invisible">Only 4 rooms left</span>
                     </button>

@@ -1,7 +1,7 @@
 {
-  "name": "natours",
+  "name": "trillo",
   "version": "1.0.0",
-  "description": "Landing page for natours",
+  "description": "",
   "main": "index.js",
   "scripts": {
     "devserver": "live-server --open=/dist",
