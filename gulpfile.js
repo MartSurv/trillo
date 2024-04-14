@@ -1,42 +1,44 @@
 //Main
-const gulp = require('gulp');
+const gulp = require("gulp");
 
 //Styles
-const sass = require('gulp-sass');
-const autoprefixer = require('gulp-autoprefixer');
-const cleanCSS = require('gulp-clean-css');
+const sass = require("gulp-sass")(require("sass"));
+const autoprefixer = require("gulp-autoprefixer");
+const cleanCSS = require("gulp-clean-css");
 
 //Images
-const imagemin = require('gulp-imagemin');
+const imagemin = require("gulp-imagemin");
 
 var paths = {
-    styles: {
-        src: 'sass/**/*.scss',
-        dest: 'dist/css/'
-    },
-    images: {
-        src: 'src/img/*',
-        dest: 'dist/img'
-    }
+  styles: {
+    src: "sass/**/*.scss",
+    dest: "dist/css/",
+  },
+  images: {
+    src: "img/*",
+    dest: "dist/img",
+  },
 };
 
 function styles() {
-    return gulp.src(paths.styles.src)
-        .pipe(sass().on('error', sass.logError))
-        .pipe(autoprefixer())
-        .pipe(cleanCSS())
-        .pipe(gulp.dest(paths.styles.dest));
+  return gulp
+    .src(paths.styles.src)
+    .pipe(sass().on("error", sass.logError))
+    .pipe(autoprefixer())
+    .pipe(cleanCSS())
+    .pipe(gulp.dest(paths.styles.dest));
 }
 
 function images() {
-    return gulp.src(paths.images.src)
-        .pipe(imagemin())
-        .pipe(gulp.dest(paths.images.dest));
+  return gulp
+    .src(paths.images.src)
+    .pipe(imagemin())
+    .pipe(gulp.dest(paths.images.dest));
 }
 
 function watch() {
-    gulp.watch(paths.styles.src, styles);
-    gulp.watch(paths.images.src, images);
+  gulp.watch(paths.styles.src, styles);
+  gulp.watch(paths.images.src, images);
 }
 
 exports.default = watch;

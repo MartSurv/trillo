@@ -4,22 +4,24 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "devserver": "live-server --open=/dist",
+    "serve": "serve dist/",
     "gulp": "gulp",
-    "dev": "concurrently \"npm run gulp\" \"npm run devserver\""
+    "dev": "concurrently \"yarn gulp\" \"yarn serve\""
   },
   "author": "Martynas",
   "license": "ISC",
   "devDependencies": {
     "concurrently": "^5.2.0",
-    "gulp": "^4.0.2",
+    "gulp": "^5.0.0",
     "gulp-autoprefixer": "^7.0.1",
     "gulp-clean-css": "^4.3.0",
     "gulp-imagemin": "^7.1.0",
-    "gulp-sass": "^4.1.0",
-    "node-sass": "^4.14.1"
+    "gulp-sass": "^5.1.0",
+    "sass": "^1.75.0",
+    "serve": "^14.2.1"
   },
   "browserslist": [
     "defaults"
-  ]
+  ],
+  "packageManager": "yarn@4.1.1"
 }
